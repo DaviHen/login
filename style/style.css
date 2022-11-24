@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Cores usadas:
+    branco: #f3eae0;
+    roxo: #8f2dff;
+*/
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100vh;
+}
+
+.first{
+    background-color: #8f2dff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.first div img{
+    width: 100%;
+}
+
+.first div p{
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 1px black;
+}
+
+.second{
+    background-color: #f3eae0;
+}
+
+.second h2{
+    background-color: #6721b6;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    transition: padding-left 1.5s;
+    text-align: left;
+
+}
+
+.second h2:hover{
+    padding-left: 50%;
+}
+
+.second div{
+    padding: 2rem;
+    color: #8f2dff;
+}
+
+
+
+.second div form input{
+    display: block;
+    margin: 0.5em;
+    width: 100%;
+}
+
+.second div form label{
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.second div form p {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0 5rem;
+}
+
+.second div form input[type="email"], .second div form input[type="password"]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #8f2dff;
+    transition: width 1s;
+    font-size: 1.3rem;
+}
+
+.second div form input[type="email"]:focus, .second div form input[type="password"]:focus{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #8f2dff;
+    background-color: none;
+}
+
+
+.second div form input[type="submit"]{
+    background-color: #8f2dff;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    width: 50%;
+    margin: 5rem auto;
+}
+
+.second div form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: #6721b6;
+}
+
+.second div form a{
+   color:#8f2dff;
+}
+
+@media (max-width: 1350px){
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+    }
+}
+
+@media(max-width: 1000px){
+    .first div p{
+        width: 90%;
+        margin: 2rem auto;
+        font-size: 1rem;
+        text-shadow: 1px 1px 1px black
+    }
+}
+
+
+@media(max-width: 800px){   
+    .container{
+        display: block;
+    }
+
+    .first div{
+        display: flex;
+        flex-wrap:wrap-reverse;
+        justify-content: space-around;
+    }
+
+    .first div img{
+        max-width: 100%;
+    }
+}
+
+
+@media(max-width: 600px){ 
+
+    .first{
+        display: none;
+    }
+
+    .second div form input[type="email"], .second div form input[type="password"]{
+        width: 100%;
+        background-color: #f3eae0;
+    }
+
+    .second div form p {
+        font-size: 1.7rem;
+        text-align: center;
+        margin: 1rem 0 5rem;
+    }
+
+    .second div form input[type="submit"]{
+        margin: 1.5rem auto;
+    }
+}

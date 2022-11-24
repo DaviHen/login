@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f3eae0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#caForm{
+    background-color: #8f2dff;
+    background-image: linear-gradient(to bottom, #8f2dff, #ca48fd);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px black;
+    width: 60%;
+}
+
+#caForm div label{
+    width: 100%;
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    margin: .5rem 0;
+    display: inline-block;
+}
+
+#caForm div{
+    width: 100%;
+}
+
+#caForm div input{
+    width: 100%;
+    padding: .3rem .5rem;
+    margin-bottom: .2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid #8f2dff;
+}
+
+#caFormSubmitBtn{
+    background-color: #9440f3;
+    color: white;
+    border: none;
+    outline: 0.5px solid rgb(167, 167, 167);
+    padding: 1rem 3rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 5px black;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#caFormSubmitBtn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#textOutput{
+    visibility: hidden;
+}
+
+.fa-circle-check, .fa-circle-xmark{
+    display: none;
+}
+
+div.correct #textOutput, div.wrong #textOutput{
+    visibility: visible;
+    display: inline-block;
+}
+
+/* Wright */
+
+div.correct .fa-circle-xmark{
+    display: none;
+}
+
+div.correct .fa-circle-check{
+    display: inline-block;
+}
+
+div.correct #textOutput, .fa-circle-check{
+    color: rgb(60, 255, 0);
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Wrong */
+
+div.wrong .fa-circle-check{
+    display: none;
+}
+
+div.wrong .fa-circle-xmark{
+    display: inline-block;
+}
+
+div.wrong #textOutput, .fa-circle-xmark{
+    color: #D2001A;
+}
