@@ -86,7 +86,7 @@
 }
 
 .second div form input[type="email"], .second div form input[type="password"]{
-    width: 50%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -97,7 +97,6 @@
 }
 
 .second div form input[type="email"]:focus, .second div form input[type="password"]:focus{
-    width: 100%;
     border: none;
     outline: none;
     border-bottom: 3px solid #8f2dff;
