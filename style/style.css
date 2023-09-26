@@ -164,6 +164,10 @@
         display: none;
     }
 
+    .second{
+        height: 100vh;
+    }
+
     .second div form input[type="email"], .second div form input[type="password"]{
         width: 100%;
         background-color: #f3eae0;
